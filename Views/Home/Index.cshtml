@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUDelicious</title>
+</head>
+<body>
+    <h1>Welcome to CRUDelicious!</h1>
+    <a style="float: right;" href="/new">Add New Dish</a>
+    <h3>Check out some recent dishes!</h3>
+    <hr>
+    @model List<Dish>
+    @foreach(var dish in Model)
+    {
+       <p><a href="/@dish.DishID">@dish.Name</a> @dish.Chef</p>
+    }
+</body>
+</html>

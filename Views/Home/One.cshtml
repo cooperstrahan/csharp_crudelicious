@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUDelicious</title>
+</head>
+<body>
+    @model Dish
+    @{
+        <h1>@Model.Name</h1>
+        <a style="float: right;" href="/">Home</a>
+        <h2>Chef: @Model.Chef</h2>
+        <hr>
+        <h5>@Model.Description</h5>
+        <h5>Calories:  @Model.Calories</h5>
+        <h5>Tastiness: @Model.Tastiness</h5>
+        <a href="/delete/@Model.DishID"><button class="btn btn-danger">Delete</button></a>
+        <a href="/edit/@Model.DishID"><button class="btn btn-primary">Edit</button></a>
+    }
+    
+</body>
+</html>

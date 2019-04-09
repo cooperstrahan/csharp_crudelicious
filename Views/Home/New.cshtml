@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUDelicious</title>
+</head>
+<body>
+    <h1>Add New Dish</h1>
+    <a style="float: right;" href="/">Home</a>
+    @model Dish
+    <form action="/create" method="post">
+
+        <div class="form-group">
+            <span asp-validation-for="Chef"></span>
+            <label asp-for="Chef">Chef: </label>
+            <input asp-for="Chef">
+        </div>
+
+        <div class="form-group">
+            <span asp-validation-for="Name"></span>
+            <label asp-for="Name">Dish Name: </label>
+            <input asp-for="Name">
+        </div>
+
+        <div class="form-group">
+            <span asp-validation-for="Tastiness"></span>
+            <label asp-for="Tastiness">Tastiness: </label>
+            <select asp-for="Tastiness">
+                <option asp-value="1">1</option>
+                <option asp-value="2">2</option>
+                <option asp-value="3">3</option>
+                <option asp-value="4">4</option>
+                <option asp-value="5">5</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <span asp-validation-for="Calories"></span>
+            <label asp-for="Calories">Calories:  </label>
+            <input asp-for="Calories">
+        </div>
+
+        <div class="form-group">
+            <span asp-validation-for="Description"></span>
+            <label style="vertical-align: top" asp-for="Description">Description: </label>
+            <textarea asp-for="Description" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary">Add Dish</button>
+    </form>
+</body>
+</html>
